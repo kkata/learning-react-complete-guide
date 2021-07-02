@@ -2,6 +2,8 @@ import React from "react";
 
 import "./ExpensesFilter.css";
 
+const years = ["2022", "2021", "2020", "2019"];
+
 const ExpensesFilter = (props) => {
   const dropDownChangeHandler = (event) => {
     props.onChangeFilter(event.target.value);
@@ -12,9 +14,16 @@ const ExpensesFilter = (props) => {
       <div className="expenses-filter__control">
         <label>Filter by year</label>
         <select value={props.selected} onChange={dropDownChangeHandler}>
-          <option value="2022">2022</option>
+          {years.map((year, index) => {
+            return (
+              <option value={year} key={index}>
+                {year}
+              </option>
+            );
+          })}
+          {/* <option value="2022">2022</option>
           <option value="2021">2021</option>
-          <option value="2020">2020</option>
+          <option value="2020">2020</option> */}
           <option value="2019">2019</option>
         </select>
       </div>

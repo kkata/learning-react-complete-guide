@@ -6,6 +6,9 @@ import styles from "./User.module.css";
 
 const User = (props) => {
   const [user, setUser] = useState({ name: "", age: "" });
+  const [isError, setIsError] = useState(false);
+  const [errorText, setErrorText] = useState({ title: "", message: "" });
+
   const handleUserName = (event) => {
     setUser({ ...user, name: event.target.value });
   };
@@ -15,18 +18,38 @@ const User = (props) => {
   const handleForm = (event) => {
     event.preventDefault();
     if (user.name === "" || user.age === "") {
+      setIsError(true);
+      setErrorText({
+        title: "invalid input",
+        message: "Please enter a valid name and age (non-empty values).",
+      });
       return;
     }
     if (Number(user.age) < 0) {
+      setIsError(true);
+      setErrorText({
+        title: "invalid age",
+        message: "Please enter a valid age (0 or more).",
+      });
       return;
     }
     props.onAddUser(user);
     setUser({ name: "", age: "" });
   };
 
+  const handleModal = () => {
+    setIsError(false);
+  };
+
   return (
     <>
-      <ErrorModal title="An error occured!" message="Something wrong!" />
+      {isError && (
+        <ErrorModal
+          title={errorText.title}
+          message={errorText.message}
+          onConfirm={handleModal}
+        />
+      )}
       <Card className={styles.input}>
         <form onSubmit={handleForm}>
           <div>

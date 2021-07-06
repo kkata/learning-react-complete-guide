@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "../layout/Card";
 import Button from "../layout/Button";
+import ErrorModal from "../layout/ErrorModal";
 import styles from "./User.module.css";
 
 const User = (props) => {
@@ -24,29 +25,32 @@ const User = (props) => {
   };
 
   return (
-    <Card className={styles.input}>
-      <form onSubmit={handleForm}>
-        <div>
-          <label htmlFor="user-name">UserName</label>
-          <input
-            type="text"
-            id="user-name"
-            onChange={handleUserName}
-            value={user.name}
-          />
-        </div>
-        <div>
-          <label htmlFor="user-age">Age(Years)</label>
-          <input
-            type="number"
-            id="user-age"
-            onChange={handleUserAge}
-            value={user.age}
-          />
-        </div>
-        <Button type="submit">Add User</Button>
-      </form>
-    </Card>
+    <>
+      <ErrorModal title="An error occured!" message="Something wrong!" />
+      <Card className={styles.input}>
+        <form onSubmit={handleForm}>
+          <div>
+            <label htmlFor="user-name">UserName</label>
+            <input
+              type="text"
+              id="user-name"
+              onChange={handleUserName}
+              value={user.name}
+            />
+          </div>
+          <div>
+            <label htmlFor="user-age">Age(Years)</label>
+            <input
+              type="number"
+              id="user-age"
+              onChange={handleUserAge}
+              value={user.age}
+            />
+          </div>
+          <Button type="submit">Add User</Button>
+        </form>
+      </Card>
+    </>
   );
 };
 

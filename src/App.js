@@ -5,9 +5,14 @@ import UserList from "./components/User/UserList";
 
 const App = () => {
   const [userList, setUserList] = useState([]);
+  const handleAddUser = (user) => {
+    setUserList((prevUserList) => {
+      return [user, ...prevUserList];
+    });
+  };
   return (
     <div>
-      <User list={userList} onUpdate={setUserList} />
+      <User onAddUser={handleAddUser} />
       <UserList list={userList} />
     </div>
   );

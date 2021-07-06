@@ -19,7 +19,7 @@ const User = (props) => {
     if (Number(user.age) < 0) {
       return;
     }
-    props.onUpdate([...props.list, user]);
+    props.onAddUser(user);
     setUser({ name: "", age: "" });
   };
 

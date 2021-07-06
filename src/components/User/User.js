@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Card from "../layout/Card";
+import Button from "../layout/Button";
 import styles from "./User.module.css";
 
 const User = (props) => {
@@ -39,7 +40,7 @@ const User = (props) => {
             value={user.age}
           />
         </div>
-        <button>Add User</button>
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   );

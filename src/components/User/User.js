@@ -13,10 +13,14 @@ const User = (props) => {
   };
   const handleForm = (event) => {
     event.preventDefault();
-    if (user.name !== "" && user.age !== "") {
-      props.onUpdate([...props.list, user]);
-      setUser({ name: "", age: "" });
+    if (user.name === "" || user.age === "") {
+      return;
     }
+    if (Number(user.age) < 0) {
+      return;
+    }
+    props.onUpdate([...props.list, user]);
+    setUser({ name: "", age: "" });
   };
 
   return (

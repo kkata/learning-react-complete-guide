@@ -1,9 +1,10 @@
-import React from "react";
+import Card from "../layout/Card";
+import styles from "./UserList.module.css";
 
 const UserList = (props) => {
   if (props.list.length) {
     return (
-      <div>
+      <Card className={styles.userList}>
         <ul>
           {props.list.map((item, index) => {
             return (
@@ -13,10 +14,10 @@ const UserList = (props) => {
             );
           })}
         </ul>
-      </div>
+      </Card>
     );
   } else {
-    return <p>No Users</p>;
+    return <></>;
   }
 };
 

@@ -10,10 +10,10 @@ const User = (props) => {
   const [errorText, setErrorText] = useState({ title: "", message: "" });
 
   const handleUserName = (event) => {
-    setUser({ ...user, name: event.target.value });
+    setUser({ ...user, name: event.currentTarget.value });
   };
   const handleUserAge = (event) => {
-    setUser({ ...user, age: event.target.value });
+    setUser({ ...user, age: event.currentTarget.value });
   };
   const handleForm = (event) => {
     event.preventDefault();

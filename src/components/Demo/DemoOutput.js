@@ -1,8 +1,10 @@
 import React from "react";
+import MyParagraph from "./MyParagraph";
 
 const DemoOutput = (props) => {
   console.log("DemoOutput");
-  return <p>{props.show ? "This is new!" : ""}</p>;
+  return <MyParagraph>{props.show ? "This is new!" : ""}</MyParagraph>;
 };
 
-export default DemoOutput;
+// propsがプリミティブなのでmemo化できる
+export default React.memo(DemoOutput);

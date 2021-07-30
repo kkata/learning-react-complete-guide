@@ -17,4 +17,5 @@ const Button = (props) => {
 };
 
 // memo() is not work as I expected, because...
+// 親のAppコンポーネントのsetShowParagraph()の処理が走るため（関数はオブジェクトで、プティミティブではない）
 export default React.memo(Button);

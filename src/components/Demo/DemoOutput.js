@@ -6,4 +6,5 @@ const DemoOutput = (props) => {
   return <MyParagraph>{props.show ? "This is new!" : ""}</MyParagraph>;
 };
 
+// propsがプリミティブなのでmemo化できる
 export default React.memo(DemoOutput);

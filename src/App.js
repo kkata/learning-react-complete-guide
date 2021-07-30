@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import Button from "./components/UI/Button/Button";
 import DemoOutput from "./components/Demo/DemoOutput";
@@ -9,9 +9,13 @@ function App() {
 
   console.log("APP RUNNING");
 
-  const toggleParagraphHandler = () => {
+  // useCallback() でButtonコンポーネント関数が実行されないように
+  const toggleParagraphHandler = useCallback(() => {
     setShowParagraph((prevShowParagraph) => !prevShowParagraph);
-  };
+  }, []);
+  // const toggleParagraphHandler = () => {
+  //   setShowParagraph((prevShowParagraph) => !prevShowParagraph);
+  // };
   return (
     <div className="app">
       <h1>Hi there!</h1>

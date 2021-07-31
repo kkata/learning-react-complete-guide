@@ -1,16 +1,17 @@
-import React from "react";
+// useMemoはMemoize（キャッシュを用いて高速化）
+import React, { useMemo } from "react";
 
 import classes from "./DemoList.module.css";
 
 const DemoList = (props) => {
-  // const { items } = props;
+  const { items } = props;
 
-  const sortedList = props.items.sort((a, b) => (a = b));
+  // const sortedList = props.items.sort((a, b) => (a = b));
 
-  // const sortedList = useMemo(() => {
-  //   console.log('Items sorted');
-  //   return items.sort((a, b) => a - b);
-  // }, [items]);
+  const sortedList = useMemo(() => {
+    console.log("Items sorted");
+    return items.sort((a, b) => a - b);
+  }, [items]);
   console.log("DemoList RUNNING");
 
   return (
@@ -25,4 +26,6 @@ const DemoList = (props) => {
   );
 };
 
+// React.memoはpropsで変更された値が降ってくるので（props.title）効かない
+// export default React.memo(DemoList);
 export default DemoList;

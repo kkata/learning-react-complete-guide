@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import classes from "./Button.module.css";
+import classes from './Button.module.css';
 
 const Button = (props) => {
-  console.log("Button is running");
+  console.log('Button RUNNING');
   return (
     <button
-      type={props.type || "button"}
+      type={props.type || 'button'}
       className={`${classes.button} ${props.className}`}
       onClick={props.onClick}
       disabled={props.disabled}
@@ -16,6 +16,4 @@ const Button = (props) => {
   );
 };
 
-// memo() is not work as I expected, because...
-// 親のAppコンポーネントのsetShowParagraph()の処理が走るため（関数はオブジェクトで、プティミティブではない）
 export default React.memo(Button);

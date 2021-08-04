@@ -1,0 +1,22 @@
+{
+  "movie": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "openingText": "typicode",
+      "releaseDate": "2020-01-01"
+    },
+    {
+      "title": "aaa",
+      "openingText": "aaaaaa",
+      "releaseDate": "2021-11-11",
+      "id": 2
+    },
+    {
+      "title": "third title",
+      "openingText": "opening text ",
+      "releaseDate": "2020-09-01",
+      "id": 3
+    }
+  ]
+}

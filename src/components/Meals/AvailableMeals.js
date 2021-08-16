@@ -39,25 +39,37 @@ const AvailableMeals = () => {
     fetchMeals({
       url: process.env.REACT_APP_API_DUMMY_MEALS,
     }).then((data) => {
-      console.log(data);
+      // console.log(data);
       setMeals(data);
     });
   }, [fetchMeals]);
 
-  const mealsList = meals.map((meal) => (
-    <MealItem
-      id={meal.id}
-      key={meal.id}
-      name={meal.name}
-      description={meal.description}
-      price={meal.price}
-    />
-  ));
+  let content;
+
+  if (isLoading) {
+    content = <p>Loading...</p>;
+  }
+
+  if (error) {
+    content = <p>{error}. Try again</p>;
+  }
+
+  if (!isLoading && !error) {
+    const mealsList = meals.map((meal) => (
+      <MealItem
+        id={meal.id}
+        key={meal.id}
+        name={meal.name}
+        description={meal.description}
+        price={meal.price}
+      />
+    ));
+    content = <ul>{mealsList}</ul>;
+  }
+
   return (
     <section className={classes.meals}>
-      <Card>
-        <ul>{mealsList}</ul>
-      </Card>
+      <Card>{content}</Card>
     </section>
   );
 };

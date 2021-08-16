@@ -6,6 +6,7 @@ const useHttp = () => {
 
   const sendRequest = useCallback(async (requestConfig) => {
     setIsLoading(true);
+    // console.log(isLoading);
     setError(null);
     try {
       const response = await fetch(requestConfig.url, {
@@ -19,12 +20,12 @@ const useHttp = () => {
       }
 
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
+      setIsLoading(false);
       return data;
     } catch (err) {
       setError(err.message || "Something went wrong!");
     }
-    setIsLoading(false);
   }, []);
 
   return {

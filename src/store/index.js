@@ -7,6 +7,8 @@ const initialState = {
 
 const counterReducer = (state = initialState, action) => {
   if (action.type === "increment") {
+    // state.counter++; THIS IS SUPER BAD. DO NOT THIS.
+
     return { counter: state.counter + 1, showCounter: state.showCounter };
   }
   if (action.type === "increase") {

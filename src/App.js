@@ -1,11 +1,20 @@
-import BasicForm from "./components/BasicForm";
+import { useSelector } from "react-redux";
 
-function App() {
+import Counter from "./components/Counter";
+import Header from "./components/Header";
+import Auth from "./components/Auth";
+import UserProfile from "./components/UserProfile";
+
+const App = () => {
+  const isAuthed = useSelector((state) => state.auth.isAuthenticated);
   return (
-    <div className="app">
-      <BasicForm />
-    </div>
+    <>
+      <Header />
+      {!isAuthed && <Auth />}
+      {isAuthed && <UserProfile />}
+      <Counter />
+    </>
   );
-}
+};
 
 export default App;

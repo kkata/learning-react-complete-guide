@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+[React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) で学ぶ。
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+各ブランチで作業しているはず...
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [セクション 3: React Basics & Working With Components](https://github.com/kkata/learning-react-complete-guide/tree/03-react-basics-working-with-components)
+- [セクション 5: Rendering Lists & Conditional Content](https://github.com/kkata/learning-react-complete-guide/tree/sec05-rendering-list-and-conditional-content)
+- [セクション 8: Time to Practice: A Complete Practice Project](https://github.com/kkata/learning-react-complete-guide/tree/sec08-a-complete-practice-project)
+- [セクション 9: Diving Deeper: Working with Fragments, Portals & "Refs"](https://github.com/kkata/learning-react-complete-guide/tree/sec09-working-with-fragments-portals-refs)
+- [セクション 10: Advanced: Handling Side Effects, Using Reducers & Using the Context API](https://github.com/kkata/learning-react-complete-guide/tree/sec10-handling-side-effects-using-reducers-and-context-api)
+- [セクション 11: Practice Project: Building a Food Order App](https://github.com/kkata/learning-react-complete-guide/tree/sec11-building-food-order-app)
+- [セクション 12: A Look Behind The Scenes Of React & Optimization Techniques](https://github.com/kkata/learning-react-complete-guide/tree/sec12-look-behind-and-optimization-techniques)
+- [セクション 14: Sending Http Requests (e.g. Connecting to a Database)](https://github.com/kkata/learning-react-complete-guide/tree/sec14-sending-http-requests)
+- [セクション 15: Building Custom React Hooks](https://github.com/kkata/learning-react-complete-guide/tree/sec15-building-custom-hooks)
+- [セクション 16: Working with Forms & User Input](https://github.com/kkata/learning-react-complete-guide/tree/sec16-working-with-forms-and-user-input)
+- [セクション 17: Practice Project: Adding Http & Forms To The Food Order App](https://github.com/kkata/learning-react-complete-guide/tree/sec17-practice-adding-http-and-forms-to-food-order-app)
+- [セクション 18: Diving into Redux (An Alternative To The Context API)](https://github.com/kkata/learning-react-complete-guide/tree/sec18-diving-into-redux)
+- [セクション 19: Advanced Redux](https://github.com/kkata/learning-react-complete-guide/tree/sec19-advanced-redux)
+- [セクション 20: Building a Multi-Page SPA with React Router](https://github.com/kkata/learning-react-complete-guide/tree/sec20-building-SPA-with-React-Router)
+- [セクション 22: Adding Authentication To React Apps](https://github.com/kkata/learning-react-complete-guide/tree/sec22-adding-authentication)
+- [セクション 27: React + TypeScript](https://github.com/kkata/learning-react-complete-guide/tree/sec27-react-typescript)
